@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from Jewelery.views import JeweleryListView
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/Jewelery/<int:pk>", JeweleryListView.as_view()),
 ]

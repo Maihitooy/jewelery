@@ -20,5 +20,5 @@ from Jewelery.views import JeweleryListView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/Jewelery/<int:pk>", JeweleryListView.as_view()),
+    path(r"api/Jewelery/<int:pk>", JeweleryListView.as_view()),
 ]

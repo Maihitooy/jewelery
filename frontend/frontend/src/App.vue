@@ -1,43 +1,68 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <div v-for="item in x" v-bind:key="item" class="d">
-    <h1>THE BEST in the World!</h1>
-  </div>
+    <div class="test">
+        <h1>Тестируем сайт по ювелирке</h1>
+    </div>
+    <button @click="request_database">ПОЛУЧИТЬ ДАННЫЕ</button>
+    <div>
+        {{items}}
+    </div>
+    <div class="cards">
+        <div v-for="item in items" v-bind:key="item.id" class="card">
+            <img v-bind:src="item.image" alt="Не работает">
+            <p class="name">{{item.name}}</p>
+            <p class="price">{{item.price}}</p>
+        </div>
+    </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  },
-  data() {
-    return {
-      x: 10,
+    import axios from "axios";
+
+    export default {
+        name: 'App',
+        data() {
+            return {
+                items: [],
+            }
+        },
+        methods: {
+            async request_database() {
+                (await axios({
+                    method: 'get',
+                    url: 'http://127.0.0.1:8000/api/Jewelery/'
+                })).data.forEach(item => {
+                    this.items.push(item)
+                })
+            }
+        }
+
     }
-  },
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    /*.cards {*/
+    /*    display: flex;*/
+    /*    flex-wrap: wrap;*/
+    /*    justify-content: center;*/
+    /*}*/
+    /*.card img {*/
+    /*    width: 30%;*/
+    /*}*/
 
-.d{
-  color: red;
-  background-color: blue;
-  width: 20%;
-  height: 20%;
-  box-shadow: #5cb85c;
-  margin: auto;
-}
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        flex: 0 1 calc(100%/3 - 20px*2);
+        margin: 20px;
+    }
+
+    .card img {
+        width: 90%;
+    }
 </style>

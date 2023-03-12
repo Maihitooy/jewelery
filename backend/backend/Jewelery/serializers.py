@@ -13,4 +13,4 @@ from Jewelery.models import Jewelery
 class JewelerySerializer(ModelSerializer):
     class Meta:
         model = Jewelery
-        fields = ('id', 'name', 'price')
+        fields = ('id', 'name', 'price', 'image')

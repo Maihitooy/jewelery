@@ -18,11 +18,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from Jewelery.views import JeweleryListView
+from Jewelery.views import JeweleryCRUD, JeweleryListView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path(r"api/Jewelery/<int:pk>/", JeweleryListView.as_view()),
+    path(r"api/Jewelery/<int:pk>/", JeweleryCRUD.as_view()),
+    path(r"api/Jewelery/", JeweleryListView.as_view()),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

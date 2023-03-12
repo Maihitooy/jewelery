@@ -8,4 +8,4 @@ class Jewelery(models.Model):
     image = models.ImageField(verbose_name='image', blank=False, null=False)  # black=False - не может быть пустым
 
     def __str__(self):
-        return self.name  # return f'{self.name}, {self.price}' - чтобы вернуть несколько значений
+        return f'{self.pk}, {self.name}'  # return f'{self.name}, {self.price}' - чтобы вернуть несколько значений

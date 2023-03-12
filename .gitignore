@@ -4,3 +4,4 @@ backend/venv
 backend/venv/
 /backend/backend/Jewelery/migrations/
 /backend/backend/db.sqlite3
+/backend/backend/media/

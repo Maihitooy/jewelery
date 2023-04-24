@@ -7,10 +7,34 @@
 
 from rest_framework.serializers import ModelSerializer
 
-from Jewelery.models import Jewelery
+from Jewelery.models import Jewelery, Category, PreciousMetal, PreciousMetalSample
+
+
+class CategorySerializer(ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ('id', 'name', 'image')
+
+
+class PreciousMetalSerializer(ModelSerializer):
+    class Meta:
+        model = PreciousMetal
+        fields = ('id', 'name_metal')
+
+
+class PreciousMetalSampleSerializer(ModelSerializer):
+    class Meta:
+        model = PreciousMetalSample
+        fields = ('id', 'sample')
 
 
 class JewelerySerializer(ModelSerializer):
+    category = CategorySerializer(read_only=True)
+    precious_metal = PreciousMetalSerializer(read_only=True)
+    precious_metal_sample = PreciousMetalSampleSerializer(read_only=True)
+
     class Meta:
         model = Jewelery
-        fields = ('id', 'name', 'price', 'image')
+        fields = ('id', 'name', 'price', 'image', 'category', 'description', 'precious_metal', 'precious_metal_sample')
+
+

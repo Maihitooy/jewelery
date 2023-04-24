@@ -15,3 +15,4 @@ class JeweleryCRUD(RetrieveUpdateDestroyAPIView):
 class JeweleryListView(ListAPIView):
     queryset = Jewelery.objects.all()
     serializer_class = JewelerySerializer
+

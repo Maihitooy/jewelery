@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jewelery.serializers &mdash; LAGRACI 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            LAGRACI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">LAGRACI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">Jewelery.serializers</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for Jewelery.serializers</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Serializer в Django - это инструмент, который позволяет преобразовывать</span>
+<span class="c1"># данные из моделей Django в форматы, которые могут быть переданы через</span>
+<span class="c1"># API или сохранены в базе данных. Он также может выполнять обратное преобразование,</span>
+<span class="c1"># то есть преобразование данных из формата API обратно в модели Django.</span>
+<span class="c1"># Serializer является важным компонентом в построении веб-приложений на Django,</span>
+<span class="c1"># особенно при работе с RESTful API.</span>
+
+<span class="kn">from</span> <span class="nn">rest_framework.serializers</span> <span class="kn">import</span> <span class="n">ModelSerializer</span>
+
+<span class="kn">from</span> <span class="nn">Jewelery.models</span> <span class="kn">import</span> <span class="n">Jewelery</span><span class="p">,</span> <span class="n">Category</span><span class="p">,</span> <span class="n">PreciousMetal</span><span class="p">,</span> <span class="n">PreciousMetalSample</span>
+
+
+<div class="viewcode-block" id="CategorySerializer"><a class="viewcode-back" href="../../Jewelery.html#Jewelery.serializers.CategorySerializer">[docs]</a><span class="k">class</span> <span class="nc">CategorySerializer</span><span class="p">(</span><span class="n">ModelSerializer</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Класс сериализует (преобразовывает объекты в типы данных, понятные javascript и front-end фреймворкам) данные для класса Category.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="CategorySerializer.Meta"><a class="viewcode-back" href="../../Jewelery.html#Jewelery.serializers.CategorySerializer.Meta">[docs]</a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Класс Meta определяет метаданные модели Category.</span>
+
+<span class="sd">        Атрибуты</span>
+<span class="sd">        --------</span>
+<span class="sd">        model :</span>
+<span class="sd">            модель, к которой относятся метаданные</span>
+<span class="sd">        fields:</span>
+<span class="sd">            список полей, которые будут использоваться при сериализации экземпляров модели</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">Category</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;image&#39;</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="PreciousMetalSerializer"><a class="viewcode-back" href="../../Jewelery.html#Jewelery.serializers.PreciousMetalSerializer">[docs]</a><span class="k">class</span> <span class="nc">PreciousMetalSerializer</span><span class="p">(</span><span class="n">ModelSerializer</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Класс сериализует (преобразовывает объекты в типы данных, понятные javascript и front-end фреймворкам) данные для класса PreciousMetal.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PreciousMetalSerializer.Meta"><a class="viewcode-back" href="../../Jewelery.html#Jewelery.serializers.PreciousMetalSerializer.Meta">[docs]</a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Класс Meta определяет метаданные модели PreciousMetal.</span>
+
+<span class="sd">        Атрибуты</span>
+<span class="sd">        --------</span>
+<span class="sd">        model :</span>
+<span class="sd">            модель, к которой относятся метаданные</span>
+<span class="sd">        fields:</span>
+<span class="sd">            список полей, которые будут использоваться при сериализации экземпляров модели</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">PreciousMetal</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name_metal&#39;</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="PreciousMetalSampleSerializer"><a class="viewcode-back" href="../../Jewelery.html#Jewelery.serializers.PreciousMetalSampleSerializer">[docs]</a><span class="k">class</span> <span class="nc">PreciousMetalSampleSerializer</span><span class="p">(</span><span class="n">ModelSerializer</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Класс сериализует (преобразовывает объекты в типы данных, понятные javascript и front-end фреймворкам) данные для класса PreciousMetalSample.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PreciousMetalSampleSerializer.Meta"><a class="viewcode-back" href="../../Jewelery.html#Jewelery.serializers.PreciousMetalSampleSerializer.Meta">[docs]</a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Класс Meta определяет метаданные модели PreciousMetalSample.</span>
+
+<span class="sd">        Атрибуты</span>
+<span class="sd">        --------</span>
+<span class="sd">        model :</span>
+<span class="sd">            модель, к которой относятся метаданные</span>
+<span class="sd">        fields:</span>
+<span class="sd">            список полей, которые будут использоваться при сериализации экземпляров модели</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">PreciousMetalSample</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;sample&#39;</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="JewelerySerializer"><a class="viewcode-back" href="../../Jewelery.html#Jewelery.serializers.JewelerySerializer">[docs]</a><span class="k">class</span> <span class="nc">JewelerySerializer</span><span class="p">(</span><span class="n">ModelSerializer</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Класс сериализует (преобразовывает объекты в типы данных, понятные javascript и front-end фреймворкам) данные для класса Jewelery.</span>
+
+
+<span class="sd">    Атрибуты</span>
+<span class="sd">    --------</span>
+<span class="sd">    category : CategorySerializer</span>
+<span class="sd">        категория</span>
+<span class="sd">    precious_metal : PreciousMetalSerializer</span>
+<span class="sd">        металл</span>
+<span class="sd">    precious_metal_sample : PreciousMetalSampleSerializer</span>
+<span class="sd">        проба металла</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">category</span> <span class="o">=</span> <span class="n">CategorySerializer</span><span class="p">(</span><span class="n">read_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">precious_metal</span> <span class="o">=</span> <span class="n">PreciousMetalSerializer</span><span class="p">(</span><span class="n">read_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">precious_metal_sample</span> <span class="o">=</span> <span class="n">PreciousMetalSampleSerializer</span><span class="p">(</span><span class="n">read_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<div class="viewcode-block" id="JewelerySerializer.Meta"><a class="viewcode-back" href="../../Jewelery.html#Jewelery.serializers.JewelerySerializer.Meta">[docs]</a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Класс Meta определяет метаданные модели Jewelery.</span>
+
+<span class="sd">        Атрибуты</span>
+<span class="sd">        --------</span>
+<span class="sd">        model :</span>
+<span class="sd">            модель, к которой относятся метаданные</span>
+<span class="sd">        fields:</span>
+<span class="sd">            список полей, которые будут использоваться при сериализации экземпляров модели</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">Jewelery</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;precious_metal&#39;</span><span class="p">,</span> <span class="s1">&#39;precious_metal_sample&#39;</span><span class="p">)</span></div></div>
+
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Markevich Maria, Stasenkova Daria, Namoev Artem.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jewelery package &mdash; LAGRACI 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            LAGRACI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Jewelery package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-Jewelery.admin">Jewelery.admin module</a></li>
+<li><a class="reference internal" href="#module-Jewelery.apps">Jewelery.apps module</a><ul>
+<li><a class="reference internal" href="#Jewelery.apps.JeweleryConfig"><code class="docutils literal notranslate"><span class="pre">JeweleryConfig</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.apps.JeweleryConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">JeweleryConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.apps.JeweleryConfig.name"><code class="docutils literal notranslate"><span class="pre">JeweleryConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-Jewelery.models">Jewelery.models module</a><ul>
+<li><a class="reference internal" href="#Jewelery.models.Category"><code class="docutils literal notranslate"><span class="pre">Category</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.models.Category.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Category.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Category.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Category.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Category.id"><code class="docutils literal notranslate"><span class="pre">Category.id</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Category.image"><code class="docutils literal notranslate"><span class="pre">Category.image</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Category.jewelery_set"><code class="docutils literal notranslate"><span class="pre">Category.jewelery_set</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Category.name"><code class="docutils literal notranslate"><span class="pre">Category.name</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Category.objects"><code class="docutils literal notranslate"><span class="pre">Category.objects</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery"><code class="docutils literal notranslate"><span class="pre">Jewelery</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Jewelery.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Jewelery.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.category"><code class="docutils literal notranslate"><span class="pre">Jewelery.category</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.category_id"><code class="docutils literal notranslate"><span class="pre">Jewelery.category_id</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.description"><code class="docutils literal notranslate"><span class="pre">Jewelery.description</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.id"><code class="docutils literal notranslate"><span class="pre">Jewelery.id</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.image"><code class="docutils literal notranslate"><span class="pre">Jewelery.image</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.name"><code class="docutils literal notranslate"><span class="pre">Jewelery.name</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.objects"><code class="docutils literal notranslate"><span class="pre">Jewelery.objects</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.precious_metal"><code class="docutils literal notranslate"><span class="pre">Jewelery.precious_metal</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.precious_metal_id"><code class="docutils literal notranslate"><span class="pre">Jewelery.precious_metal_id</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.precious_metal_sample"><code class="docutils literal notranslate"><span class="pre">Jewelery.precious_metal_sample</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.precious_metal_sample_id"><code class="docutils literal notranslate"><span class="pre">Jewelery.precious_metal_sample_id</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.Jewelery.price"><code class="docutils literal notranslate"><span class="pre">Jewelery.price</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetal"><code class="docutils literal notranslate"><span class="pre">PreciousMetal</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetal.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">PreciousMetal.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetal.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">PreciousMetal.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetal.id"><code class="docutils literal notranslate"><span class="pre">PreciousMetal.id</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetal.jewelery_set"><code class="docutils literal notranslate"><span class="pre">PreciousMetal.jewelery_set</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetal.name_metal"><code class="docutils literal notranslate"><span class="pre">PreciousMetal.name_metal</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetal.objects"><code class="docutils literal notranslate"><span class="pre">PreciousMetal.objects</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetalSample"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSample</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetalSample.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSample.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetalSample.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSample.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetalSample.id"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSample.id</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetalSample.jewelery_set"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSample.jewelery_set</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetalSample.objects"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSample.objects</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.models.PreciousMetalSample.sample"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSample.sample</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-Jewelery.serializers">Jewelery.serializers module</a><ul>
+<li><a class="reference internal" href="#Jewelery.serializers.CategorySerializer"><code class="docutils literal notranslate"><span class="pre">CategorySerializer</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.serializers.CategorySerializer.Meta"><code class="docutils literal notranslate"><span class="pre">CategorySerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.serializers.CategorySerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">CategorySerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.serializers.CategorySerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">CategorySerializer.Meta.model</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Jewelery.serializers.JewelerySerializer"><code class="docutils literal notranslate"><span class="pre">JewelerySerializer</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.serializers.JewelerySerializer.Meta"><code class="docutils literal notranslate"><span class="pre">JewelerySerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.serializers.JewelerySerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">JewelerySerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.serializers.JewelerySerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">JewelerySerializer.Meta.model</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Jewelery.serializers.PreciousMetalSampleSerializer"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSampleSerializer</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.serializers.PreciousMetalSampleSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSampleSerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.serializers.PreciousMetalSampleSerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSampleSerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.serializers.PreciousMetalSampleSerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSampleSerializer.Meta.model</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Jewelery.serializers.PreciousMetalSerializer"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSerializer</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.serializers.PreciousMetalSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.serializers.PreciousMetalSerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.serializers.PreciousMetalSerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">PreciousMetalSerializer.Meta.model</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-Jewelery.tests">Jewelery.tests module</a></li>
+<li><a class="reference internal" href="#module-Jewelery.views">Jewelery.views module</a><ul>
+<li><a class="reference internal" href="#Jewelery.views.JeweleryCRUD"><code class="docutils literal notranslate"><span class="pre">JeweleryCRUD</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.views.JeweleryCRUD.queryset"><code class="docutils literal notranslate"><span class="pre">JeweleryCRUD.queryset</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.views.JeweleryCRUD.serializer_class"><code class="docutils literal notranslate"><span class="pre">JeweleryCRUD.serializer_class</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Jewelery.views.JeweleryListView"><code class="docutils literal notranslate"><span class="pre">JeweleryListView</span></code></a><ul>
+<li><a class="reference internal" href="#Jewelery.views.JeweleryListView.queryset"><code class="docutils literal notranslate"><span class="pre">JeweleryListView.queryset</span></code></a></li>
+<li><a class="reference internal" href="#Jewelery.views.JeweleryListView.serializer_class"><code class="docutils literal notranslate"><span class="pre">JeweleryListView.serializer_class</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-Jewelery">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">LAGRACI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Jewelery package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Jewelery.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="jewelery-package">
+<h1>Jewelery package<a class="headerlink" href="#jewelery-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Jewelery.migrations.html">Jewelery.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Jewelery.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Jewelery.migrations.html#module-Jewelery.migrations.0001_initial">Jewelery.migrations.0001_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Jewelery.migrations.html#Jewelery.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Jewelery.migrations.html#Jewelery.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="Jewelery.migrations.html#Jewelery.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="Jewelery.migrations.html#Jewelery.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Jewelery.migrations.html#module-Jewelery.migrations.0002_category_image">Jewelery.migrations.0002_category_image module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Jewelery.migrations.html#Jewelery.migrations.0002_category_image.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Jewelery.migrations.html#Jewelery.migrations.0002_category_image.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="Jewelery.migrations.html#Jewelery.migrations.0002_category_image.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Jewelery.migrations.html#module-Jewelery.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-Jewelery.admin">
+<span id="jewelery-admin-module"></span><h2>Jewelery.admin module<a class="headerlink" href="#module-Jewelery.admin" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-Jewelery.apps">
+<span id="jewelery-apps-module"></span><h2>Jewelery.apps module<a class="headerlink" href="#module-Jewelery.apps" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.apps.JeweleryConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Jewelery.apps.</span></span><span class="sig-name descname"><span class="pre">JeweleryConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Jewelery/apps.html#JeweleryConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.apps.JeweleryConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.apps.JeweleryConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#Jewelery.apps.JeweleryConfig.default_auto_field" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.apps.JeweleryConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Jewelery'</span></em><a class="headerlink" href="#Jewelery.apps.JeweleryConfig.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Jewelery.models">
+<span id="jewelery-models-module"></span><h2>Jewelery.models module<a class="headerlink" href="#module-Jewelery.models" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.models.Category">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Jewelery.models.</span></span><span class="sig-name descname"><span class="pre">Category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Jewelery/models.html#Category"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.models.Category" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Класс для представления категории товаров.</p>
+<section id="id1">
+<h3>Атрибуты<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>name<span class="classifier">CharField</span></dt><dd><p>наименование категории</p>
+</dd>
+<dt>image<span class="classifier">ImageField</span></dt><dd><p>фотография товара</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Методы<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>__str__():</dt><dd><p>Возвращает наименование категории и PrimaryKey.</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="Jewelery.models.Category.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#Jewelery.models.Category.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Jewelery.models.Category.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#Jewelery.models.Category.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Category.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#Jewelery.models.Category.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Category.image">
+<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#Jewelery.models.Category.image" title="Permalink to this definition"></a></dt>
+<dd><p>Just like the FileDescriptor, but for ImageFields. The only difference is
+assigning the width/height to the width_field/height_field, if appropriate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Category.jewelery_set">
+<span class="sig-name descname"><span class="pre">jewelery_set</span></span><a class="headerlink" href="#Jewelery.models.Category.jewelery_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Category.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#Jewelery.models.Category.name" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Category.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#Jewelery.models.Category.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Jewelery.models.</span></span><span class="sig-name descname"><span class="pre">Jewelery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Jewelery/models.html#Jewelery"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.models.Jewelery" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Класс для представления карточки товара.</p>
+<section id="id3">
+<h3>Атрибуты<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>name<span class="classifier">CharField</span></dt><dd><p>наименование товара</p>
+</dd>
+<dt>price<span class="classifier">PositiveIntegerField</span></dt><dd><p>цена товара</p>
+</dd>
+<dt>image<span class="classifier">ImageField</span></dt><dd><p>фотография товара</p>
+</dd>
+<dt>category<span class="classifier">ForeignKey</span></dt><dd><p>категория, к которой относится товар</p>
+</dd>
+<dt>description<span class="classifier">TextField</span></dt><dd><p>описание товара</p>
+</dd>
+<dt>precious_metal<span class="classifier">ForeignKey</span></dt><dd><p>название металла: серебро/золото</p>
+</dd>
+<dt>precious_metal_sample<span class="classifier">ForeignKey</span></dt><dd><p>проба металла</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h3>Методы<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>__str__():</dt><dd><p>Возвращает наименование товара и PrimaryKey.</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.category">
+<span class="sig-name descname"><span class="pre">category</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.category" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.category_id">
+<span class="sig-name descname"><span class="pre">category_id</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.category_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.description" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.image">
+<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.image" title="Permalink to this definition"></a></dt>
+<dd><p>Just like the FileDescriptor, but for ImageFields. The only difference is
+assigning the width/height to the width_field/height_field, if appropriate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.name" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#Jewelery.models.Jewelery.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.precious_metal">
+<span class="sig-name descname"><span class="pre">precious_metal</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.precious_metal" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.precious_metal_id">
+<span class="sig-name descname"><span class="pre">precious_metal_id</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.precious_metal_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.precious_metal_sample">
+<span class="sig-name descname"><span class="pre">precious_metal_sample</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.precious_metal_sample" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.precious_metal_sample_id">
+<span class="sig-name descname"><span class="pre">precious_metal_sample_id</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.precious_metal_sample_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.Jewelery.price">
+<span class="sig-name descname"><span class="pre">price</span></span><a class="headerlink" href="#Jewelery.models.Jewelery.price" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Jewelery.models.</span></span><span class="sig-name descname"><span class="pre">PreciousMetal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Jewelery/models.html#PreciousMetal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.models.PreciousMetal" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Класс для представления металла.</p>
+<section id="id5">
+<h3>Атрибуты<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>name_metal<span class="classifier">CharField</span></dt><dd><p>наименование металла</p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h3>Методы<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>__str__():</dt><dd><p>Возвращает наименование металла и PrimaryKey.</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetal.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#Jewelery.models.PreciousMetal.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetal.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#Jewelery.models.PreciousMetal.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetal.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#Jewelery.models.PreciousMetal.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetal.jewelery_set">
+<span class="sig-name descname"><span class="pre">jewelery_set</span></span><a class="headerlink" href="#Jewelery.models.PreciousMetal.jewelery_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetal.name_metal">
+<span class="sig-name descname"><span class="pre">name_metal</span></span><a class="headerlink" href="#Jewelery.models.PreciousMetal.name_metal" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetal.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#Jewelery.models.PreciousMetal.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetalSample">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Jewelery.models.</span></span><span class="sig-name descname"><span class="pre">PreciousMetalSample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Jewelery/models.html#PreciousMetalSample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.models.PreciousMetalSample" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Класс для представления проб металла.</p>
+<section id="id7">
+<h3>Атрибуты<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>sample<span class="classifier">PositiveIntegerField</span></dt><dd><p>проба металла</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h3>Методы<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>__str__():</dt><dd><p>Возвращает пробу металла и PrimaryKey.</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetalSample.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#Jewelery.models.PreciousMetalSample.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetalSample.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#Jewelery.models.PreciousMetalSample.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetalSample.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#Jewelery.models.PreciousMetalSample.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetalSample.jewelery_set">
+<span class="sig-name descname"><span class="pre">jewelery_set</span></span><a class="headerlink" href="#Jewelery.models.PreciousMetalSample.jewelery_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetalSample.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#Jewelery.models.PreciousMetalSample.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.models.PreciousMetalSample.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><a class="headerlink" href="#Jewelery.models.PreciousMetalSample.sample" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-Jewelery.serializers">
+<span id="jewelery-serializers-module"></span><h2>Jewelery.serializers module<a class="headerlink" href="#module-Jewelery.serializers" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.serializers.CategorySerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Jewelery.serializers.</span></span><span class="sig-name descname"><span class="pre">CategorySerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Jewelery/serializers.html#CategorySerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.serializers.CategorySerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Класс сериализует (преобразовывает объекты в типы данных, понятные javascript и front-end фреймворкам) данные для класса Category.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.serializers.CategorySerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/Jewelery/serializers.html#CategorySerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.serializers.CategorySerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс Meta определяет метаданные модели Category.</p>
+<section id="id9">
+<h3>Атрибуты<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>model :</dt><dd><p>модель, к которой относятся метаданные</p>
+</dd>
+<dt>fields:</dt><dd><p>список полей, которые будут использоваться при сериализации экземпляров модели</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.serializers.CategorySerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'name',</span> <span class="pre">'image')</span></em><a class="headerlink" href="#Jewelery.serializers.CategorySerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.serializers.CategorySerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#Jewelery.serializers.CategorySerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#Jewelery.models.Category" title="Jewelery.models.Category"><code class="xref py py-class docutils literal notranslate"><span class="pre">Category</span></code></a></p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.serializers.JewelerySerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Jewelery.serializers.</span></span><span class="sig-name descname"><span class="pre">JewelerySerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Jewelery/serializers.html#JewelerySerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.serializers.JewelerySerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Класс сериализует (преобразовывает объекты в типы данных, понятные javascript и front-end фреймворкам) данные для класса Jewelery.</p>
+<section id="id10">
+<h3>Атрибуты<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>category<span class="classifier">CategorySerializer</span></dt><dd><p>категория</p>
+</dd>
+<dt>precious_metal<span class="classifier">PreciousMetalSerializer</span></dt><dd><p>металл</p>
+</dd>
+<dt>precious_metal_sample<span class="classifier">PreciousMetalSampleSerializer</span></dt><dd><p>проба металла</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.serializers.JewelerySerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/Jewelery/serializers.html#JewelerySerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.serializers.JewelerySerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс Meta определяет метаданные модели Jewelery.</p>
+<section id="id11">
+<h4>Атрибуты<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h4>
+<dl class="simple">
+<dt>model :</dt><dd><p>модель, к которой относятся метаданные</p>
+</dd>
+<dt>fields:</dt><dd><p>список полей, которые будут использоваться при сериализации экземпляров модели</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.serializers.JewelerySerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'name',</span> <span class="pre">'price',</span> <span class="pre">'image',</span> <span class="pre">'category',</span> <span class="pre">'description',</span> <span class="pre">'precious_metal',</span> <span class="pre">'precious_metal_sample')</span></em><a class="headerlink" href="#Jewelery.serializers.JewelerySerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.serializers.JewelerySerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#Jewelery.serializers.JewelerySerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#Jewelery.models.Jewelery" title="Jewelery.models.Jewelery"><code class="xref py py-class docutils literal notranslate"><span class="pre">Jewelery</span></code></a></p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.serializers.PreciousMetalSampleSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Jewelery.serializers.</span></span><span class="sig-name descname"><span class="pre">PreciousMetalSampleSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Jewelery/serializers.html#PreciousMetalSampleSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.serializers.PreciousMetalSampleSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Класс сериализует (преобразовывает объекты в типы данных, понятные javascript и front-end фреймворкам) данные для класса PreciousMetalSample.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.serializers.PreciousMetalSampleSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/Jewelery/serializers.html#PreciousMetalSampleSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.serializers.PreciousMetalSampleSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс Meta определяет метаданные модели PreciousMetalSample.</p>
+<section id="id12">
+<h3>Атрибуты<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>model :</dt><dd><p>модель, к которой относятся метаданные</p>
+</dd>
+<dt>fields:</dt><dd><p>список полей, которые будут использоваться при сериализации экземпляров модели</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.serializers.PreciousMetalSampleSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'sample')</span></em><a class="headerlink" href="#Jewelery.serializers.PreciousMetalSampleSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.serializers.PreciousMetalSampleSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#Jewelery.serializers.PreciousMetalSampleSerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#Jewelery.models.PreciousMetalSample" title="Jewelery.models.PreciousMetalSample"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreciousMetalSample</span></code></a></p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.serializers.PreciousMetalSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Jewelery.serializers.</span></span><span class="sig-name descname"><span class="pre">PreciousMetalSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Jewelery/serializers.html#PreciousMetalSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.serializers.PreciousMetalSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Класс сериализует (преобразовывает объекты в типы данных, понятные javascript и front-end фреймворкам) данные для класса PreciousMetal.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.serializers.PreciousMetalSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/Jewelery/serializers.html#PreciousMetalSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.serializers.PreciousMetalSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс Meta определяет метаданные модели PreciousMetal.</p>
+<section id="id13">
+<h3>Атрибуты<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>model :</dt><dd><p>модель, к которой относятся метаданные</p>
+</dd>
+<dt>fields:</dt><dd><p>список полей, которые будут использоваться при сериализации экземпляров модели</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.serializers.PreciousMetalSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'name_metal')</span></em><a class="headerlink" href="#Jewelery.serializers.PreciousMetalSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.serializers.PreciousMetalSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#Jewelery.serializers.PreciousMetalSerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#Jewelery.models.PreciousMetal" title="Jewelery.models.PreciousMetal"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreciousMetal</span></code></a></p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Jewelery.tests">
+<span id="jewelery-tests-module"></span><h2>Jewelery.tests module<a class="headerlink" href="#module-Jewelery.tests" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-Jewelery.views">
+<span id="jewelery-views-module"></span><h2>Jewelery.views module<a class="headerlink" href="#module-Jewelery.views" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.views.JeweleryCRUD">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Jewelery.views.</span></span><span class="sig-name descname"><span class="pre">JeweleryCRUD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Jewelery/views.html#JeweleryCRUD"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.views.JeweleryCRUD" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RetrieveUpdateDestroyAPIView</span></code></p>
+<p>Класс JeweleryCRUD реализует CRUD-операции для модели Jewelery.</p>
+<section id="id14">
+<h3>Атрибуты<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>queryset:</dt><dd><p>набор объектов модели Jewelery, которые будут использоваться для выполнения операций CRUD</p>
+</dd>
+<dt>serializer_class:</dt><dd><p>класс сериализатора, который будет использоваться для преобразования экземпляров модели в JSON и обратно</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.views.JeweleryCRUD.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Jewelery:</span> <span class="pre">1,</span> <span class="pre">Золотые</span> <span class="pre">серьги&gt;,</span> <span class="pre">&lt;Jewelery:</span> <span class="pre">2,</span> <span class="pre">Золотое</span> <span class="pre">кольцо</span> <span class="pre">с</span> <span class="pre">брилиантами&gt;,</span> <span class="pre">&lt;Jewelery:</span> <span class="pre">3,</span> <span class="pre">Серебряное</span> <span class="pre">кольцо&gt;,</span> <span class="pre">&lt;Jewelery:</span> <span class="pre">4,</span> <span class="pre">Колье</span> <span class="pre">с</span> <span class="pre">бусинами&gt;,</span> <span class="pre">&lt;Jewelery:</span> <span class="pre">5,</span> <span class="pre">Золотой</span> <span class="pre">браслет</span> <span class="pre">с</span> <span class="pre">гравировкой&gt;,</span> <span class="pre">&lt;Jewelery:</span> <span class="pre">6,</span> <span class="pre">Брошь</span> <span class="pre">на</span> <span class="pre">вещь&gt;]&gt;</span></em><a class="headerlink" href="#Jewelery.views.JeweleryCRUD.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.views.JeweleryCRUD.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#Jewelery.views.JeweleryCRUD.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#Jewelery.serializers.JewelerySerializer" title="Jewelery.serializers.JewelerySerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">JewelerySerializer</span></code></a></p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Jewelery.views.JeweleryListView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Jewelery.views.</span></span><span class="sig-name descname"><span class="pre">JeweleryListView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Jewelery/views.html#JeweleryListView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Jewelery.views.JeweleryListView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ListAPIView</span></code></p>
+<p>Класс JeweleryListView отображает список объектов модели Jewelery.</p>
+<section id="id15">
+<h3>Атрибуты<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>queryset:</dt><dd><p>набор объектов модели Jewelery, которые будут использоваться для выполнения операций CRUD</p>
+</dd>
+<dt>serializer_class:</dt><dd><p>класс сериализатора, который будет использоваться для преобразования экземпляров модели в JSON и обратно</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.views.JeweleryListView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Jewelery:</span> <span class="pre">1,</span> <span class="pre">Золотые</span> <span class="pre">серьги&gt;,</span> <span class="pre">&lt;Jewelery:</span> <span class="pre">2,</span> <span class="pre">Золотое</span> <span class="pre">кольцо</span> <span class="pre">с</span> <span class="pre">брилиантами&gt;,</span> <span class="pre">&lt;Jewelery:</span> <span class="pre">3,</span> <span class="pre">Серебряное</span> <span class="pre">кольцо&gt;,</span> <span class="pre">&lt;Jewelery:</span> <span class="pre">4,</span> <span class="pre">Колье</span> <span class="pre">с</span> <span class="pre">бусинами&gt;,</span> <span class="pre">&lt;Jewelery:</span> <span class="pre">5,</span> <span class="pre">Золотой</span> <span class="pre">браслет</span> <span class="pre">с</span> <span class="pre">гравировкой&gt;,</span> <span class="pre">&lt;Jewelery:</span> <span class="pre">6,</span> <span class="pre">Брошь</span> <span class="pre">на</span> <span class="pre">вещь&gt;]&gt;</span></em><a class="headerlink" href="#Jewelery.views.JeweleryListView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Jewelery.views.JeweleryListView.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#Jewelery.views.JeweleryListView.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#Jewelery.serializers.JewelerySerializer" title="Jewelery.serializers.JewelerySerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">JewelerySerializer</span></code></a></p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-Jewelery">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Jewelery" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Markevich Maria, Stasenkova Daria, Namoev Artem.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

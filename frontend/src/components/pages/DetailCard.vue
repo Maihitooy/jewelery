@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div v-if="loading">loading...</div>
+    <div v-if="loading">
+      <default-spinner></default-spinner>
+    </div>
     <div v-else>
       <div class="card">
 
@@ -22,9 +24,11 @@
 
 <script>
 import axios from "axios";
+import DefaultSpinner from "@/components/ui/DefaultSpinner.vue";
 
 export default {
   name: "DetailCard",
+  components: {DefaultSpinner},
   data() {
     return {
       item: null,

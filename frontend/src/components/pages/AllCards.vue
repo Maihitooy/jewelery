@@ -3,7 +3,9 @@
     <div class="MyCards">
       <div v-for="item in items" v-bind:key="item.id" class="MyCard">
         <div class="card">
-          <img v-bind:src="item.image" class="card-img-top" alt="Fissure in Sandstone"/>
+          <div class="card_click" @click="$router.push(`/card/${item.id}`)">
+            <img v-bind:src="item.image" class="card-img-top" alt="Fissure in Sandstone"/>
+          </div>
           <div class="card-body">
             <h5 class="card-title">{{item.name}}</h5>
             <p class="card-text">{{item.price}} ₽</p>
@@ -33,6 +35,9 @@ export default {
       })).data.forEach(item => {
         this.items.push(item)
       })
+    },
+    get_id(id) {
+      return '/card/' + id
     }
   },
   mounted() {
@@ -53,6 +58,10 @@ export default {
   height: 10%;
   flex: 0 1 calc(100% / 4 - 20px * 2);
   margin: 20px;
+}
+
+.card_click{
+  cursor: pointer;
 }
 
 </style>

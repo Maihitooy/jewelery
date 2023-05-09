@@ -4,6 +4,7 @@
       <default-spinner></default-spinner>
     </div>
     <div v-else>
+      <div class="fake"></div>
       <div class="card">
 
         <img v-bind:src="item.image" class="card-img-top" />
@@ -20,6 +21,7 @@
     </div>
 
   </div>
+  <div class="fake_2"></div>
 </template>
 
 <script>
@@ -49,6 +51,10 @@ export default {
 
 <style scoped>
 
+.fake{
+  margin-top: 5px;
+}
+
 .card {
   flex-direction: row;
   align-items: center;
@@ -66,6 +72,10 @@ export default {
 .card-body{
   text-align: left;
   margin-left: 100px;
+}
+
+.fake_2{
+  margin-bottom: 100px;
 }
 @media only screen and (max-width: 768px) {
   a {
